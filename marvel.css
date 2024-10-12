@@ -1,0 +1,44 @@
+
+
+
+
+
+#characterImg {
+    padding: 5px;
+}
+
+img {
+    object-fit: contain;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+background: #d27979;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #260606;
+}
+
+.scrollContainer {
+    margin: 5px 5px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgba(128, 0, 0, 0.5);
+    width: 500px;
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* text-align: justify; */
+}
+
