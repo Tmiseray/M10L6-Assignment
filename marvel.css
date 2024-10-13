@@ -1,7 +1,27 @@
 
+@import url(https://fonts.googleapis.com/css2?family=Playwrite+AU+NSW:wght@100..400&display=swap);
 
+html {
+    scroll-behavior: smooth;
+}
 
+body {
+    font: normal 18px/22px "Valera Round", sans-serif;
+}
 
+h1, h2, h3 {
+    font-family: "Playwrite AU NSW", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header {
+    padding: 20px;
+    box-shadow: 0px 0px 25px 10px rgba(198, 0, 4, 0.6);
+}
 
 #characterImg {
     padding: 5px;
@@ -27,7 +47,7 @@ border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-background: #260606;
+background: #430a0a;
 }
 
 .scrollContainer {
@@ -36,9 +56,12 @@ background: #260606;
     border-radius: 10px;
     background-color: rgba(128, 0, 0, 0.5);
     width: 500px;
-    height: 100px;
+    height: 200px;
     overflow-x: hidden;
     overflow-y: auto;
-    /* text-align: justify; */
+    box-shadow: 0px 0px 21px 7px rgba(198, 0, 4, 0.6);
 }
 
+li {
+    padding-left: 10px;
+}

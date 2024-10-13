@@ -36,6 +36,8 @@ document.getElementById('marvelForm').addEventListener('submit', async (event) =
 
         let characterThumbnail = `${characterData.thumbnail.path}.${characterData.thumbnail.extension}`.replace('http', 'https');
         let characterImg = document.getElementById('characterImg');
+        characterImg.innerHTML = "";
+
         let image = document.createElement('img');
         image.src = characterThumbnail;
         image.alt = characterName;
@@ -46,6 +48,8 @@ document.getElementById('marvelForm').addEventListener('submit', async (event) =
         URLs.forEach(url => {
             if (url.type === 'detail') {
                 let detailLink = document.getElementById('detailLink');
+                detailLink.innerHTML = "";
+
                 let detailBtn = document.createElement('button');
                 let detailURL = url.url.replace('http', 'https');
                 detailBtn.href = detailURL;
@@ -55,6 +59,8 @@ document.getElementById('marvelForm').addEventListener('submit', async (event) =
                 detailLink.appendChild(detailBtn);
             } else if (url.type === 'wiki') {
                 let wikiLink = document.getElementById('wikiLink');
+                wikiLink.innerHTML = "";
+
                 let wikiBtn = document.createElement('button');
                 let wikiURL = url.url.replace('http', 'https');
                 wikiBtn.href = wikiURL;
@@ -64,6 +70,8 @@ document.getElementById('marvelForm').addEventListener('submit', async (event) =
                 wikiLink.appendChild(wikiBtn);
             } else if (url.type === 'comiclink') {
                 let comicLink = document.getElementById('comicLink');
+                comicLink.innerHTML = "";
+
                 let comicBtn = document.createElement('button');
                 let comicURL = url.url.replace('http', 'https');
                 comicBtn.href = comicURL;
@@ -88,6 +96,8 @@ document.getElementById('marvelForm').addEventListener('submit', async (event) =
         comicsTitle.innerHTML = 'Comics:';
 
         let comicsList = document.getElementById('comicsList');
+        comicsList.innerHTML = "";
+
         let comicsItems = characterData.comics.items;
         comicsItems.forEach(comic => {
             let comicItem = document.createElement('li');
@@ -99,6 +109,8 @@ document.getElementById('marvelForm').addEventListener('submit', async (event) =
         seriesTitle.innerHTML = 'Series:';
 
         let seriesList = document.getElementById('seriesList');
+        seriesList.innerHTML = "";
+
         let seriesItems = characterData.series.items;
         seriesItems.forEach(series => {
             let seriesItem = document.createElement('li');
@@ -110,6 +122,8 @@ document.getElementById('marvelForm').addEventListener('submit', async (event) =
         storiesTitle.innerHTML = 'Stories:';
         
         let storiesList = document.getElementById('storiesList');
+        storiesList.innerHTML = "";
+        
         let storiesItems = characterData.stories.items;
         storiesItems.forEach(story => {
             let storyItem = document.createElement('li');
