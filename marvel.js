@@ -1,14 +1,11 @@
 
-
 const publicKey = 'e4966ab7a8c8a8d9a26a5fbf1a618afb'
 const privateKey = 'd4a43e466a727968a7aaff14ebef65b503db9642'
+
 
 function generateMD5Hash(ts) {
     return new CryptoJS.MD5(ts + privateKey + publicKey).toString();
 }
-
-
-
 
 
 async function fetchCharacterData(characterName) {
@@ -22,6 +19,7 @@ async function fetchCharacterData(characterName) {
     const characterData = results.data.results[0];
     return characterData;
 }
+
 
 document.getElementById('marvelForm').addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -139,8 +137,6 @@ document.getElementById('marvelForm').addEventListener('submit', async (event) =
         console.error("Error Fetching character information:", error);
     };
 });
-
-
 
 
 async function marvelSubmit(event) {
